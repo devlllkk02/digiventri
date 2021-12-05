@@ -1,0 +1,25 @@
+//Colors
+$orange:#F07F08;
+$blue:#211B4B;
+$grey:#636363;
+
+$white: #ffffff;
+$black: #000000;
+
+//FontSize
+$font-light: 10px;
+$font-extra-small: 12px;
+$font-small: 14px;
+$font-medium: 16px;
+$font-large: 18px;
+$font-extra-large: 20px;
+
+
+//Mixins
+//? Flexbox
+
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

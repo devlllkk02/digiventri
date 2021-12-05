@@ -1,7 +1,7 @@
 //Colors
-$orange:#F07F08;
-$blue:#211B4B;
-$grey:#636363;
+$orange: #f07f08;
+$blue: #211b4b;
+$grey: #636363;
 
 $white: #ffffff;
 $black: #000000;
@@ -14,12 +14,12 @@ $font-medium: 16px;
 $font-large: 18px;
 $font-extra-large: 20px;
 
-
 //Mixins
 //? Flexbox
 
 @mixin flexbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

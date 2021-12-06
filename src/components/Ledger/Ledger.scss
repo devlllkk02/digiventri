@@ -1,4 +1,4 @@
-.title{
+.ledger-title{
     position: absolute;
     width: 334px;
     height: 45px;
@@ -11,4 +11,18 @@
     line-height: 45px;
     text-transform: capitalize;
     color: #636363;
+}
+
+.ledger-method{
+    position: absolute;
+    width: 350px;
+    height: 40px;
+    left: 70%;
+    top: 7vw;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(99, 99, 99, 0.5);
+    box-sizing: border-box;
+    border-radius: 27px;
+    padding: 10px;
 }

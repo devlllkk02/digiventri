@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.scss";
-import Logo from './Logo.png'
-import User from './user.png'
+import Logo from './Logo.png';
+import User from './user.png';
 import { Link, Navigate } from "react-router-dom";
 
 const Logout = () => {

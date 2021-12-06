@@ -7,9 +7,14 @@ export default function Ledger() {
             <h1 className="ledger-title">Inventory Ledger 01</h1>
             <form className="ledger-form">
                 <select className="ledger-method">
-                    <option>FIFO</option>
-                    <option>WAC</option>
+                    <option value="FIFO">FIFO</option>
+                    <option value="WAC">WAC</option>
                 </select>
+                <i class="fas fa-cog"></i>
+
+                <dev>
+                
+                </dev>
             </form>
         </div>
     )

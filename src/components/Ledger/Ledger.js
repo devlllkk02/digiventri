@@ -12,9 +12,27 @@ export default function Ledger() {
                 </select>
                 <i class="fas fa-cog"></i>
 
-                <dev className="ledger-dateWrapper">
-                    <label className="ledger-datetxt" for="Date">Date</label>
-                    <input className="ledger-date" type="date" id="LedgerDate" name="Date"/>
+                <dev className="ledger-secondlineObj">
+                    <label className="ledger-secondlinetxt" for="Date">Date</label>
+                    <input className="ledger-secondlineInput" type="date" id="LedgerDate" name="Date"/>
+                </dev>
+
+                <dev className="ledger-secondlineObj">
+                    <label className="ledger-secondlinetxt" for="Type">Type</label>
+                    <select className="ledger-secondlineInput">
+                        <option value=""></option>
+                        <option value="Sample">Sample</option>
+                    </select>
+                </dev>
+
+                <dev className="ledger-secondlineObj">
+                    <label className="ledger-secondlinetxt" for="Quantity">Quantity</label>
+                    <input className="ledger-secondlineInput" type="text" name="Qty"/>
+                </dev>
+
+                <dev className="ledger-secondlineObj">
+                    <label className="ledger-secondlinetxt" for="Unit Cost">Unit Cost</label>
+                    <input className="ledger-secondlineInput" type="text" name="Unit Cost"/>
                 </dev>
             </form>
         </div>

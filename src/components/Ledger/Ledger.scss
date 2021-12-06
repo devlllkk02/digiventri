@@ -38,18 +38,19 @@
     color: rgba(99, 99, 99, 0.5);
 }
 
-.ledger-dateWrapper{
+.ledger-secondlineObj{
     position: relative;
     height: 40px;
     left: 5vw;
     top: 7vw;
+    margin-right: 7vw;
 }
 
-.ledger-datetxt{
+.ledger-secondlinetxt{
     margin-right: 1vw;
 }
 
-.ledger-date{
+.ledger-secondlineInput{
     background: #FFFFFF;
     border: 1px solid rgba(99, 99, 99, 0.5);
     box-sizing: border-box;

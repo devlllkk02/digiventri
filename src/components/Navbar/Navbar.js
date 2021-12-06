@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.scss";
 import Logo from './Logo.png'
-import Test from './test.jpg'
+//import Test from './test.jpg'
 import { Link, Navigate } from "react-router-dom";
 
 const Logout = () => {
@@ -23,7 +23,7 @@ function Navbar() {
                     <div className="user">
                         <div className="user__image">
                             <Link to="/">
-                                <img src={Test} alt="" />
+                                <img src="" alt="" />
                             </Link>
                         </div>
                         <div className="user__details">

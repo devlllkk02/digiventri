@@ -12,8 +12,9 @@ export default function Ledger() {
                 </select>
                 <i class="fas fa-cog"></i>
 
-                <dev>
-                
+                <dev className="ledger-dateWrapper">
+                    <label className="ledger-datetxt" for="Date">Date</label>
+                    <input className="ledger-date" type="date" id="LedgerDate" name="Date"/>
                 </dev>
             </form>
         </div>

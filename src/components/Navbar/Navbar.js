@@ -29,7 +29,7 @@ function Navbar() {
                         <div className="user__details">
                             <div className="user__name">
 
-                                <p>Milindi Senevirathne</p>
+                                <p>Gayan Kodithuwakku</p>
 
                             </div>
                             <div className="Logout">

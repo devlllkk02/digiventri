@@ -21,15 +21,15 @@ function Navbar() {
                     <div className="middle">
                     </div>
                     <div className="user">
-                        <div className="user__image">
+                        <div className="user_image">
                             <Link to="/">
                                 <img src={Test} alt="" />
                             </Link>
                         </div>
-                        <div className="user__details">
-                            <div className="user__name">
+                        <div className="user_details">
+                            <div className="user_name">
 
-                                <p>Milindi Senevirathne</p>
+                                <p>Vihan Gammanpila</p>
 
                             </div>
                             <div className="Logout">
@@ -39,7 +39,7 @@ function Navbar() {
                     </div>
                 </div>
             </div>
-            <div className="nav"></div>
+            <div className="spacer"></div>
         </>
     );
 }

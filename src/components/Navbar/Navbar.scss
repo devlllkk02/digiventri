@@ -38,7 +38,7 @@
             height: 70px;
             width: 250px;
             @include flexbox;
-            .user__image {
+            .user_image {
                 height: 100%;
                 width: 60px;
                 @include flexbox;
@@ -48,19 +48,17 @@
 
                     object-fit: cover;
                     object-position: center;
-
                     border-radius: 50%;
-
                     border: 2px solid rgba($color: $orange, $alpha: 0.8);
                 }
             }
-            .user__details {
+            .user_details {
                 height: 100%;
                 width: 190px;
                 @include flexbox;
                 flex-direction: column;
 
-                .user__name {
+                .user_name {
                     height: 30px;
                     width: 100%;
                     @include flexbox;
@@ -99,7 +97,7 @@
     }
 }
 
-.nav {
+.spacer {
     height: 70px;
     width: 100%;
 }

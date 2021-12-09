@@ -1,0 +1,35 @@
+// ----- Person -----
+@import "../../../../Theme.scss";
+
+.person {
+  @include flexbox;
+  flex-direction: column;
+  width: 250px;
+  height: 250px;
+
+  .person__image {
+    width: 250px;
+    height: 150px;
+    @include flexbox;
+    // background-color: lightseagreen;
+    img {
+      object-fit: cover;
+      object-position: center;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 2px solid $orange;
+    }
+  }
+  .person__name {
+    height: 100px;
+    width: 250px;
+    // background-color: lightgreen;
+    @include flexbox;
+    align-items: flex-start;
+    p {
+      padding-top: 30px;
+      color: $grey;
+    }
+  }
+}

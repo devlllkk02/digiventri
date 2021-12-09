@@ -1,0 +1,106 @@
+// ----- Home -----
+@import "../../../Theme.scss";
+
+.home {
+  .home__firstPage {
+    width: 100%;
+    height: 100vh;
+    // background-color: lightgreen;
+    @include flexbox;
+    flex-direction: column;
+    .home__firstPage__logo {
+        // background-color: lightcoral;
+      height: 250px;
+      img {
+        height: 250px;
+      }
+    }
+    .home__firstPage__buttons {
+        // background-color: lightblue;
+      height: 125px;
+      width: 600px;
+      @include flexbox;
+      table {
+        height: 100%;
+        border-collapse: collapse;
+        tbody {
+          height: 100%;
+          tr {
+            height: 100%;
+            @include flexbox;
+            td {
+              height: 100%;
+              .home__signup {
+                // background-color: lightseagreen;
+                height: 100%;
+                width: 175px;
+                @include flexbox;
+
+                button {
+                  @include ButtonDark;
+                }
+              }
+              .home__login {
+                // background-color: lightpink;
+                height: 100%;
+                width: 175px;
+                @include flexbox;
+
+                button {
+                  @include ButtonLight;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .home__secondPage {
+    height: 100vh;
+    width: 100%;
+    // background-color: lightgreen;
+
+    .home__secondPage__title {
+      // background-color: lightsteelblue;
+      font-size: $font-heading;
+      color: $orange;
+      font-weight: 700;
+      height: 120px;
+      @include flexbox;
+    }
+    .home__secondPage__body {
+      // background-color: lightcoral;
+      width: 100%;
+      height: 500px;
+
+      .home__secondPage__body__container {
+        width: 90%;
+        height: 100%;
+        margin: 0px auto;
+        // background-color: pink;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 250px);
+        // grid-row-gap: 30px;
+        justify-content: space-between;
+        .home__person {
+          width: 250px;
+          height: 250px;
+          // background-color: lightsalmon;
+        }
+      }
+    }
+  }
+
+  .homepage__footer {
+    width: 100%;
+    height: 70px;
+    @include flexbox;
+    border-top: $border-properties;
+    p {
+      color: $grey;
+      font-size: $font-extra-small;
+    }
+  }
+}

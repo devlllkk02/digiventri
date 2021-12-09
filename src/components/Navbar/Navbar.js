@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.scss";
 
 function Navbar() {
+  
   return (
     <div className="navbar">
       <div className="navbar__container">

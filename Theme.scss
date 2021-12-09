@@ -6,6 +6,12 @@ $grey: #636363;
 $white: #ffffff;
 $black: #000000;
 
+$border-properties: 1px solid
+  rgba(
+    $color: $grey,
+    $alpha: 0.5,
+  );
+
 //FontSize
 $font-light: 10px;
 $font-extra-small: 12px;
@@ -13,6 +19,8 @@ $font-small: 14px;
 $font-medium: 16px;
 $font-large: 18px;
 $font-extra-large: 20px;
+
+$font-heading: 24px;
 
 //Mixins
 //? Flexbox
@@ -23,6 +31,44 @@ $font-extra-large: 20px;
   align-items: center;
 }
 
-p{
+@mixin ButtonDark {
+  height: 45px;
+  width: 150px;
+  border-style: none;
+  border-radius: 25px;
+  border: 2px solid $orange;
+  background-color: $orange;
+  color: $white;
+  font-weight: 600;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    background-color: $white;
+    color: $orange;
+    border: 2px solid $orange;
+    cursor: pointer;
+  }
+}
+
+@mixin ButtonLight {
+  height: 45px;
+  width: 150px;
+  border-style: none;
+  border-radius: 25px;
+  border: 2px solid $orange;
+  background-color: $white;
+  color: $orange;
+  font-weight: 600;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    background-color: $orange;
+    color: $white;
+    border: 2px solid $orange;
+    cursor: pointer;
+  }
+}
+
+p {
   margin: 0px;
 }

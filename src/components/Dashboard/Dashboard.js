@@ -127,7 +127,7 @@ function Dashboard() {
                                 <div className="popup_box">
                                     <div className="popup_search_box">
                                         <div className="search_box">
-                                            <FontAwesomeIcon className="users_icon" icon={faUsers} style={{ marginTop: "16px", color: "#636363", fontSize: "17px" }} />
+                                            <FontAwesomeIcon className="users_icon" icon={faUsers} />
                                             <p>Add Participants</p>
                                         </div>
                                     </div>

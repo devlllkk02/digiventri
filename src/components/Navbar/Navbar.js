@@ -28,9 +28,9 @@ function Navbar() {
                         </div>
                         <div className="user_details">
                             <div className="user_name">
-
-                                <p>Vihan Gammanpila</p>
-
+                                <Link to="/">
+                                    <p>Vihan Gammanpila</p>
+                                </Link>
                             </div>
                             <div className="Logout">
                                 <p onClick={() => Logout()}>Logout</p>

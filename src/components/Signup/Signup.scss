@@ -10,12 +10,12 @@
   .signup__container {
     // background-color: lightpink;
     width: 450px;
-    height: 500px;
+    height: 550px;
     border: $border-properties;
     .signup__logo {
       // background-color: lightblue;
       width: 100%;
-      height: 90px;
+      height: 130px;
       @include flexbox;
       .signup__logo__container {
         margin: 0px auto;
@@ -30,7 +30,7 @@
 
     .signup__form {
       width: 100%;
-      height: calc(100% - 90px);
+      height: calc(100% - 130px);
       // background-color: lightcoral;
 
       .signup__inputfield {

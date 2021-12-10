@@ -1,11 +1,15 @@
 @import "../../../Theme.scss";
 
+
 .dashboard {
     width: 90%;
     min-height: max-content;
     margin: 0px auto;
     margin-top: 50px;
     margin-bottom: 50px;
+    font-family: mulish;
+    
+    
 
     .dashboard_container {
         @include flexbox;
@@ -22,6 +26,8 @@
             transition: all 0.5s ease-in-out;
             width: 230px;
             cursor: pointer;
+            font-family: mulish;
+            
         }
 
         .dashboard_button:hover {
@@ -44,6 +50,12 @@
             input {
                 @include searchbox;
                 padding-right: 35px;
+                font-family: mulish;
+            }
+
+            input[type="text"]:focus:not([read-only]) {
+                border-bottom: 0.1px solid $orange;
+                box-shadow: 0 0.1px 0 0 $orange;
             }
 
             .search_icon {
@@ -61,6 +73,10 @@
     .dashboard_home {
         margin-top: 70px;
 
+        table.dashboard_table>tbody>tr:hover {
+            background-color: rgb(243, 243, 243) !important;
+        }
+
         .dashboard_table {
             border-top: 1px solid rgba($color: $grey, $alpha: 0.2);
 
@@ -72,6 +88,7 @@
             td {
                 color: $grey;
                 font-size: $font-extra-small;
+                cursor: pointer;
             }
 
             .column_1 {
@@ -100,26 +117,37 @@
             height: 100%;
             padding: 20px;
             border: 3px solid rgba($color: $orange, $alpha: 0.2);
+            
 
             .popup_heading {
                 color: $blue;
                 font-weight: 400;
                 font-size: $font-small;
+                font-family: mulish;
             }
 
             .popup_topic {
                 width: 100%;
                 @include flexbox;
+                
 
                 h2 {
                     color: $orange;
                     margin-top: 0px;
                     font-size: $font-large;
+                    font-family: mulish;
                 }
             }
 
             .popup_title {
                 margin: 10px 0px;
+                font-family: mulish;
+
+                input[type="text"]:focus:not([read-only]) {
+                    border-bottom: 0.1px solid $orange;
+                    box-shadow: 0 0.1px 0 0 $orange;
+                }
+
                 .title_input {
                     width: 92%;
                     height: 13px;
@@ -129,6 +157,7 @@
                     font-size: $font-small;
                     color: $grey;
                     margin-top: 10px;
+                    font-family: mulish;
                     &:focus {
                         outline: none;
                         border: 1px solid $orange;
@@ -150,6 +179,16 @@
                         font-size: $font-extra-small;
                     }
                 }
+                
+                input[type="text"]:focus:not([read-only]) {
+                    border-bottom: 0.1px solid $orange;
+                    box-shadow: 0 0.1px 0 0 $orange;
+                }
+
+                input[type="date"]:focus:not([read-only]) {
+                    border-bottom: 0.1px solid $orange;
+                    box-shadow: 0 0.1px 0 0 $orange;
+                }
 
                 .date_input {
                     @include inventorybox;
@@ -158,11 +197,13 @@
                 .quantity_input {
                     @include inventorybox;
                     margin-left: 10px;
+                    font-family: mulish;
                 }
 
                 .unitcost_input {
                     @include inventorybox;
                     margin-left: 10px;
+                    font-family: mulish;
                 }
             }
 
@@ -173,6 +214,11 @@
                     @include flexbox;
                     position: relative;
 
+                    input[type="text"]:focus:not([read-only]) {
+                        border-bottom: 0.1px solid $orange;
+                        box-shadow: 0 0.1px 0 0 $orange;
+                    }
+
                     .share_input {
                         width: 92%;
                         height: 13px;
@@ -182,6 +228,7 @@
                         font-size: $font-small;
                         color: $grey;
                         margin-top: 10px;
+                        font-family: mulish;
                         &:focus {
                             outline: none;
                             border: 1px solid $orange;
@@ -213,10 +260,17 @@
                         width: 100%;
                         @include flexbox;
 
+                        .users_icon{
+                            margin-top: 16px;
+                            color: $grey;
+                            font-size: 17px;
+                        }
+
                         p {
                             padding-left: 10px;
                             padding-top: 15px;
                             color: $grey;
+                            font-family: mulish;
                         }
                     }
                 }

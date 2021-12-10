@@ -1,0 +1,119 @@
+// ----- Login -----
+@import "../../../Theme.scss";
+
+.login {
+//   background-color: lightgreen;
+  width: 100%;
+  height: 100vh;
+
+  @include flexbox;
+  .login__container {
+    // background-color: lightpink;
+    width: 450px;
+    height: 380px;
+    border: $border-properties;
+    .login__logo {
+    //   background-color: lightblue;
+      width: 100%;
+      height: 140px;
+      @include flexbox;
+      .login__logo__container {
+        margin: 0px auto;
+        // background-color: lightgreen;
+        @include flexbox;
+        img {
+          // height: 60px;
+          width: 75%;
+        }
+      }
+    }
+
+    .login__form {
+      width: 100%;
+      height: calc(100% - 140px);
+    //   background-color: lightcoral;
+
+      .login__inputfield {
+        // background-color: lightpink;
+        height: 45px;
+        margin-bottom: 5px;
+        @include flexbox;
+
+        input {
+          @include textbox;
+        }
+      }
+
+      .login__imageUpload {
+        // background-color: lightblue;
+        @include flexbox;
+        height: 50px;
+        margin: 0px auto;
+        margin-bottom: 5px;
+        width: 75%;
+        .login__imageUpload__button {
+        //   background-color: lightseagreen;
+          height: 5px;
+          @include flexbox;
+          label {
+            @include flexbox;
+            @include ButtonDark;
+            height: 35px;
+            font-weight: bold;
+            font-size: $font-extra-small;
+          }
+        }
+        .login__imageUpload__input {
+        //   background-color: coral;
+          height: 50px;
+          width: calc(100% - 125px);
+          @include flexbox;
+          margin-left: 10px;
+          input {
+            @include textbox;
+            width: calc(100%);
+          }
+        }
+      }
+
+      .login__submit {
+        width: 75%;
+        margin: 0px auto;
+        height: 45px;
+        margin-top: 25px;
+        margin-bottom: 5px;
+        // background-color: lightsteelblue;
+        @include flexbox;
+
+        button {
+          @include ButtonDark;
+        }
+      }
+
+      .login__dontHaveAccount {
+        width: 75%;
+        height: 15px;
+        margin: 0px auto;
+        margin-bottom: 5px;
+        // background-color: lightblue;
+        @include flexbox;
+        p {
+          color: $grey;
+          font-size: $font-extra-small;
+        }
+      }
+      .login__link {
+        width: 75%;
+        height: 15px;
+        margin: 0px auto;
+        margin-bottom: 5px;
+        // background-color: lightblue;
+        @include flexbox;
+        p {
+          color: $orange;
+          font-size: $font-extra-small;
+        }
+      }
+    }
+  }
+}

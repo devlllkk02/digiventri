@@ -97,6 +97,7 @@
         margin-bottom: 5px;
         // background-color: lightblue;
         @include flexbox;
+        opacity: 0;
         p {
           color: $grey;
           font-size: $font-extra-small;

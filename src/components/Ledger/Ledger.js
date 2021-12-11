@@ -35,6 +35,43 @@ export default function Ledger() {
                     <input className="ledger-secondlineInput" type="text" name="Unit Cost"/>
                 </dev>
             </form>
+
+            <div className="ledgertable-wrapper">
+            <div className="divTable" >
+                <div className="divTableBody">
+                <div className="divTableRow">
+                <div className="divTableCell">Date</div>
+                <div className="divTableCell">Purchased
+                    <div className="divTableCell-Cols">&nbsp;</div>
+                    <div className="divTableCell-Cols">&nbsp;</div>
+                    <div className="divTableCell-Cols">&nbsp;</div>
+                </div>
+                <div className="divTableCell">Issued
+                    <div className="divTableCell-Cols">&nbsp;</div>
+                    <div className="divTableCell-Cols">&nbsp;</div>
+                    <div className="divTableCell-Cols">&nbsp;</div>
+                </div>
+                <div className="divTableCell">Balance
+                    <div className="divTableCell-Cols">&nbsp;</div>
+                    <div className="divTableCell-Cols">&nbsp;</div>
+                    <div className="divTableCell-Cols">&nbsp;</div>
+                </div>
+                </div>
+                <div className="divTableRow">
+                <div className="divTableCell">&nbsp;</div>
+                <div className="divTableCell">&nbsp;</div>
+                <div className="divTableCell">&nbsp;</div>
+                <div className="divTableCell">&nbsp;</div>
+                </div>
+                <div className="divTableRow">
+                <div className="divTableCell">&nbsp;</div>
+                <div className="divTableCell">&nbsp;</div>
+                <div className="divTableCell">&nbsp;</div>
+                <div className="divTableCell">&nbsp;</div>
+                </div>
+                </div>
+            </div>
+            </div>
         </div>
     )
 }

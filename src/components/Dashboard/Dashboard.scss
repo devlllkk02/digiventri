@@ -1,0 +1,160 @@
+// ----- Dashboard -----
+@import "../../../Theme.scss";
+
+.dashboard {
+  width: 90%;
+  margin: 0px auto;
+  // background-color: lightgreen;
+  margin-top: 70px;
+  .dashboard__properties {
+    @include flexbox;
+    // background-color: lightcoral;
+    height: 100px;
+    .dashboard__properties__button {
+      // background-color: lightseagreen;
+      height: 100%;
+      width: calc(100% - 500px);
+      @include flexbox;
+      justify-content: flex-start;
+
+      button {
+        @include ButtonDark;
+        width: 220px;
+      }
+    }
+
+    .dashboard__properties__searchbar {
+      // background-color: lightpink;
+      height: 100%;
+      width: 250px;
+      @include flexbox;
+      position: relative;
+      input {
+        @include textbox;
+        width: 100%;
+      }
+
+      .search__icon {
+        position: absolute;
+        right: 15px;
+        color: rgba($color: $grey, $alpha: 0.5);
+      }
+    }
+
+    .dashboard__properties__selectbar {
+      // background-color: lightblue;
+      height: 100%;
+      width: 250px;
+      @include flexbox;
+      margin-left: 20px;
+    }
+  }
+  .dashboard__home {
+    // background-color: lightgreen;
+
+    .dashboard__table__title {
+      // background-color: bisque;
+      width: 100%;
+      height: 70px;
+      border-top: $border-properties;
+      border-bottom: $border-properties;
+      @include flexbox;
+
+      .column_1 {
+        // background-color: mediumslateblue;
+        height: 100%;
+        width: calc(70%);
+        @include flexbox;
+        justify-content: flex-start;
+
+        font-size: $font-medium;
+        color: $blue;
+        font-weight: bold;
+        padding-left: 15px;
+      }
+
+      .column_2 {
+        // background-color: mediumturquoise;
+        height: 100%;
+        width: calc(30%);
+        @include flexbox;
+        justify-content: flex-start;
+
+        font-size: $font-medium;
+        color: $blue;
+        font-weight: bold;
+      }
+      .column_3 {
+        // background-color: mediumslateblue;
+        height: 100%;
+        width: 40px;
+        @include flexbox;
+        justify-content: flex-start;
+
+        font-size: $font-medium;
+        color: $blue;
+        font-weight: bold;
+        padding-right: 15px;
+      }
+    }
+
+    .dashboard__table__body {
+      .dashboard__table__item {
+        @include flexbox;
+        height: 50px;
+        border-bottom: $border-properties;
+        transition: all 0.4s ease-in-out;
+
+        .column_1 {
+          // background-color: mediumturquoise;
+          height: 100%;
+          width: calc(70%);
+          @include flexbox;
+          justify-content: flex-start;
+          padding-left: 15px;
+
+          p {
+            cursor: pointer;
+            font-size: $font-small;
+            color: $grey;
+          }
+        }
+
+        .column_2 {
+          // background-color: mediumslateblue;
+          height: 100%;
+          width: calc(30%);
+          @include flexbox;
+          justify-content: flex-start;
+
+          font-size: $font-small;
+          color: $grey;
+        }
+        .column_3 {
+          // background-color: mediumturquoise;
+          height: 100%;
+          width: 40px;
+          @include flexbox;
+          justify-content: flex-start;
+
+          font-size: $font-small;
+          color: $grey;
+          padding-right: 15px;
+
+          .icon__threedots {
+            color: $grey;
+            cursor: pointer;
+          }
+        }
+        &:hover {
+          background-color: rgba($color: $blue, $alpha: 0.04);
+        }
+      }
+    }
+  }
+  .dashboard__createPopup {
+    // position: fixed;
+    // background-color: lightgreen;
+    // top: 70px;
+  }
+}

@@ -1,0 +1,639 @@
+// ----- Ledger -----
+@import "../../../Theme.scss";
+
+.ledger {
+  margin-top: 70px;
+  .ledger__heading {
+    // background-color: lightgreen;
+    width: 90%;
+    height: 60px;
+    margin: 0px auto;
+    @include flexbox;
+    .ledger__heading__title {
+      // background-color: lightcoral;
+      height: 100%;
+      width: calc(100% - 290px);
+      @include flexbox;
+      justify-content: flex-start;
+      p {
+        color: $grey;
+        font-size: $font-extra-large;
+      }
+    }
+    .ledger__heading__option {
+      // background-color: lightseagreen;
+      height: 100%;
+      width: 250px;
+      @include flexbox;
+    }
+    .ledger__heading__settings {
+      // background-color: lightcoral;
+      height: 100%;
+      width: 40px;
+      @include flexbox;
+      justify-content: flex-end;
+      font-size: $font-extra-large;
+      color: $grey;
+      cursor: pointer;
+    }
+  }
+  .ledger__properties {
+    // background-color: lightblue;
+    width: 90%;
+    height: 100px;
+    margin: 0px auto;
+    @include flexbox;
+
+    .ledger__properties__date {
+      height: 100%;
+      width: calc(25%);
+      // background-color: lightpink;
+
+      @include flexbox;
+      flex-direction: column;
+      align-items: flex-start;
+      p {
+        color: $grey;
+        height: 30px;
+        font-size: $font-small;
+      }
+      input {
+        @include textbox;
+        width: 95%;
+      }
+    }
+    .ledger__properties__type {
+      height: 100%;
+      width: calc(25%);
+      // background-color: lightgoldenrodyellow;
+      padding-right: 10px;
+      @include flexbox;
+      flex-direction: column;
+      align-items: flex-start;
+      p {
+        color: $grey;
+        height: 30px;
+        font-size: $font-small;
+      }
+
+      .ledger__properties__type__dropdown {
+        width: 95%;
+      }
+    }
+    .ledger__properties__quantity {
+      height: 100%;
+      width: calc(25%);
+      // background-color: lightpink;
+
+      @include flexbox;
+      flex-direction: column;
+      align-items: flex-start;
+      p {
+        color: $grey;
+        height: 30px;
+        font-size: $font-small;
+      }
+      input {
+        @include textbox;
+        width: 95%;
+      }
+    }
+    .ledger__properties__cost {
+      height: 100%;
+      width: calc(25%);
+      // background-color: lightgoldenrodyellow;
+      p {
+        color: $grey;
+        height: 30px;
+        font-size: $font-small;
+      }
+      @include flexbox;
+      flex-direction: column;
+      align-items: flex-start;
+
+      input {
+        @include textbox;
+        width: 95%;
+      }
+    }
+    .ledger__properties__button {
+      height: 100%;
+      width: 200px;
+      // background-color: lightpink;
+      @include flexbox;
+      align-items: flex-end;
+      flex-direction: column;
+      p {
+        color: $grey;
+        height: 30px;
+        font-size: $font-small;
+      }
+
+      button {
+        @include ButtonDark;
+      }
+    }
+  }
+  .ledger__table {
+    // background-color: lightblue;
+    width: 90%;
+    height: 200px;
+    margin: 0px auto;
+    margin-top: 10px;
+
+    // Table Header
+    .ledger__table__header {
+      // background-color: lightyellow;
+      width: 100%;
+      height: 100px;
+      border: $border-properties;
+      @include flexbox;
+      //   Date
+      .ledger__table__date {
+        height: 100%;
+        width: 10%;
+        // background-color: lightgreen;
+        border: $border-properties;
+
+        @include flexbox;
+        p {
+          color: $blue;
+          font-weight: bold;
+        }
+      }
+      //   Purchased
+      .ledger__table__purchased {
+        height: 100%;
+        width: 30%;
+        // background-color: lightcoral;
+        border: $border-properties;
+        @include flexbox;
+        flex-direction: column;
+
+        .ledger__table__purchased__top {
+          width: 100%;
+          height: 50%;
+          border-bottom: $border-properties;
+          @include flexbox;
+          p {
+            color: $blue;
+            font-weight: bold;
+          }
+        }
+        .ledger__table__purchased__bottom {
+          width: 100%;
+          height: 50%;
+          @include flexbox;
+
+          .ledger__table__purchased__quantity {
+            height: 100%;
+            width: 33%;
+            // background-color: lightseagreen;
+            @include flexbox;
+
+            p {
+              color: $blue;
+            }
+          }
+          .ledger__table__purchased__cost {
+            height: 100%;
+            width: 34%;
+            // background-color: lightyellow;
+            @include flexbox;
+            border-left: $border-properties;
+            border-right: $border-properties;
+            p {
+              color: $blue;
+            }
+          }
+          .ledger__table__purchased__balance {
+            height: 100%;
+            width: 33%;
+            // background-color: lightseagreen;
+            @include flexbox;
+            p {
+              color: $blue;
+            }
+          }
+        }
+      }
+      //   Issued
+      .ledger__table__issued {
+        height: 100%;
+        width: 30%;
+        // background-color: lightgreen;
+        border: $border-properties;
+
+        @include flexbox;
+        flex-direction: column;
+
+        .ledger__table__issued__top {
+          width: 100%;
+          height: 50%;
+          border-bottom: $border-properties;
+          @include flexbox;
+          p {
+            color: $blue;
+            font-weight: bold;
+          }
+        }
+        .ledger__table__issued__bottom {
+          width: 100%;
+          height: 50%;
+          @include flexbox;
+
+          .ledger__table__issued__quantity {
+            height: 100%;
+            width: 33%;
+            // background-color: lightseagreen;
+            @include flexbox;
+
+            p {
+              color: $blue;
+            }
+          }
+          .ledger__table__issued__cost {
+            height: 100%;
+            width: 34%;
+            // background-color: lightyellow;
+            @include flexbox;
+            border-left: $border-properties;
+            border-right: $border-properties;
+            p {
+              color: $blue;
+            }
+          }
+          .ledger__table__issued__balance {
+            height: 100%;
+            width: 33%;
+            // background-color: lightseagreen;
+            @include flexbox;
+            p {
+              color: $blue;
+            }
+          }
+        }
+      }
+      //   Balanced
+      .ledger__table__balance {
+        height: 100%;
+        width: 30%;
+        // background-color: lightcoral;
+        border: $border-properties;
+
+        @include flexbox;
+        flex-direction: column;
+
+        .ledger__table__balance__top {
+          width: 100%;
+          height: 50%;
+          border-bottom: $border-properties;
+          @include flexbox;
+          p {
+            color: $blue;
+            font-weight: bold;
+          }
+        }
+        .ledger__table__balance__bottom {
+          width: 100%;
+          height: 50%;
+          @include flexbox;
+
+          .ledger__table__balance__quantity {
+            height: 100%;
+            width: 33%;
+            // background-color: lightseagreen;
+            @include flexbox;
+
+            p {
+              color: $blue;
+            }
+          }
+          .ledger__table__balance__cost {
+            height: 100%;
+            width: 34%;
+            // background-color: lightyellow;
+            @include flexbox;
+            border-left: $border-properties;
+            border-right: $border-properties;
+            p {
+              color: $blue;
+            }
+          }
+          .ledger__table__balance__balance {
+            height: 100%;
+            width: 33%;
+            // background-color: lightseagreen;
+            @include flexbox;
+            p {
+              color: $blue;
+            }
+          }
+        }
+      }
+    }
+
+    // Table Item
+    .ledger__table__item {
+      // background-color: lightyellow;
+      width: 100%;
+      height: 50px;
+      border: $border-properties;
+      border-top: 0px solid $white;
+      @include flexbox;
+      //   Date
+      .ledger__table__item__date {
+        height: 100%;
+        width: 10%;
+        // background-color: lightgreen;
+        border: $border-properties;
+
+        @include flexbox;
+        p {
+          color: $grey;
+          font-size: $font-small;
+        }
+      }
+      //   Purchased
+      .ledger__table__item__purchased {
+        height: 100%;
+        width: 30%;
+        // background-color: lightcoral;
+        border: $border-properties;
+        @include flexbox;
+
+        .ledger__table__item__purchased__quantity {
+          height: 100%;
+          width: 33%;
+          @include flexbox;
+          // background-color: lightyellow;
+
+          p {
+            color: $grey;
+          }
+        }
+        .ledger__table__item__purchased__cost {
+          height: 100%;
+          width: 34%;
+          // background-color: lightseagreen;
+
+          @include flexbox;
+          border-left: $border-properties;
+          border-right: $border-properties;
+          p {
+            color: $grey;
+          }
+        }
+        .ledger__table__item__purchased__balance {
+          height: 100%;
+          width: 33%;
+          // background-color: lightyellow;
+
+          @include flexbox;
+          p {
+            color: $grey;
+          }
+        }
+      }
+      //   Issued
+      .ledger__table__item__issued {
+        height: 100%;
+        width: 30%;
+        // background-color: lightgreen;
+        border: $border-properties;
+
+        @include flexbox;
+
+        .ledger__table__item__issued__quantity {
+          height: 100%;
+          width: 33%;
+          @include flexbox;
+          // background-color: lightyellow;
+
+          p {
+            color: $grey;
+          }
+        }
+        .ledger__table__item__issued__cost {
+          height: 100%;
+          width: 34%;
+          // background-color: lightseagreen;
+
+          @include flexbox;
+          border-left: $border-properties;
+          border-right: $border-properties;
+          p {
+            color: $grey;
+          }
+        }
+        .ledger__table__item__issued__balance {
+          height: 100%;
+          width: 33%;
+          // background-color: lightyellow;
+
+          @include flexbox;
+          p {
+            color: $grey;
+          }
+        }
+      }
+      //   Balanced
+      .ledger__table__item__balance {
+        height: 100%;
+        width: 30%;
+        // background-color: lightcoral;
+        border: $border-properties;
+
+        @include flexbox;
+        .ledger__table__item__balance__quantity {
+          height: 100%;
+          width: 33%;
+          @include flexbox;
+          // background-color: lightyellow;
+
+          p {
+            color: $grey;
+          }
+        }
+        .ledger__table__item__balance__cost {
+          height: 100%;
+          width: 34%;
+          // background-color: lightseagreen;
+
+          @include flexbox;
+          border-left: $border-properties;
+          border-right: $border-properties;
+          p {
+            color: $grey;
+          }
+        }
+        .ledger__table__item__balance__balance {
+          height: 100%;
+          width: 33%;
+          // background-color: lightyellow;
+
+          @include flexbox;
+          p {
+            color: $grey;
+          }
+        }
+      }
+    }
+
+    // Table Closing
+    .ledger__table__closing {
+      // background-color: lightyellow;
+      width: 100%;
+      height: 50px;
+      border: $border-properties;
+      border-top: 0px solid $white;
+      @include flexbox;
+      //   Date
+      .ledger__table__closing__date {
+        height: 100%;
+        width: 10%;
+        background-color: lightgreen;
+        border: $border-properties;
+
+        @include flexbox;
+        p {
+          color: $grey;
+          font-weight: bold;
+        }
+      }
+      //   Purchased
+      .ledger__table__closing__purchased {
+        height: 100%;
+        width: 30%;
+        background-color: lightcoral;
+        border: $border-properties;
+        @include flexbox;
+
+        .ledger__table__closing__purchased__quantity {
+          height: 100%;
+          width: 33%;
+          @include flexbox;
+            background-color: lightyellow;
+
+          p {
+            color: $grey;
+            font-weight: bold;
+          }
+        }
+        .ledger__table__closing__purchased__cost {
+          height: 100%;
+          width: 34%;
+            background-color: lightseagreen;
+
+          @include flexbox;
+          border-left: $border-properties;
+          border-right: $border-properties;
+          p {
+            color: $grey;
+            font-weight: bold;
+          }
+        }
+        .ledger__table__closing__purchased__balance {
+          height: 100%;
+          width: 33%;
+            background-color: lightyellow;
+
+          @include flexbox;
+          p {
+            color: $grey;
+            font-weight: bold;
+          }
+        }
+      }
+      //   Issued
+      .ledger__table__closing__issued {
+        height: 100%;
+        width: 30%;
+        background-color: lightgreen;
+        border: $border-properties;
+
+        @include flexbox;
+
+        .ledger__table__closing__issued__quantity {
+          height: 100%;
+          width: 33%;
+          @include flexbox;
+            background-color: lightyellow;
+
+          p {
+            color: $grey;
+            font-weight: bold;
+          }
+        }
+        .ledger__table__closing__issued__cost {
+          height: 100%;
+          width: 34%;
+            background-color: lightseagreen;
+
+          @include flexbox;
+          border-left: $border-properties;
+          border-right: $border-properties;
+          p {
+            color: $grey;
+            font-weight: bold;
+          }
+        }
+        .ledger__table__closing__issued__balance {
+          height: 100%;
+          width: 33%;
+            background-color: lightyellow;
+
+          @include flexbox;
+          p {
+            color: $grey;
+            font-weight: bold;
+          }
+        }
+      }
+      //   Balanced
+      .ledger__table__closing__balance {
+        height: 100%;
+        width: 30%;
+        background-color: lightcoral;
+        border: $border-properties;
+
+        @include flexbox;
+        .ledger__table__closing__balance__quantity {
+          height: 100%;
+          width: 33%;
+          @include flexbox;
+            background-color: lightyellow;
+
+          p {
+            color: $blue;
+            font-weight: bold;
+          }
+        }
+        .ledger__table__closing__balance__cost {
+          height: 100%;
+          width: 34%;
+            background-color: lightseagreen;
+
+          @include flexbox;
+          border-left: $border-properties;
+          border-right: $border-properties;
+          p {
+            color: $grey;
+            font-weight: bold;
+          }
+        }
+        .ledger__table__closing__balance__balance {
+          height: 100%;
+          width: 33%;
+            background-color: lightyellow;
+
+          @include flexbox;
+          p {
+            color: $grey;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

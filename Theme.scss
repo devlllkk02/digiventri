@@ -6,9 +6,17 @@ $grey: #636363;
 $white: #ffffff;
 $black: #000000;
 
+// Grey Common Border
 $border-properties: 1px solid
   rgba(
     $color: $grey,
+    $alpha: 0.5,
+  );
+
+//Orange Thick Border
+$border-properties-orange: 2px solid
+  rgba(
+    $color: $orange,
     $alpha: 0.5,
   );
 
@@ -88,4 +96,34 @@ $font-heading: 24px;
 
 p {
   margin: 0px;
+}
+
+@mixin searchbox {
+  width: 200px;
+  height: 18px;
+  padding: 10px 20px;
+  margin-bottom: 0px;
+  border: 1px solid rgba($color: $grey, $alpha: 0.4);
+  border-radius: 20px;
+  font-size: 14px;
+  color: $grey;
+  &:focus {
+    outline: none;
+    border: 1px solid $orange;
+  }
+}
+
+@mixin inventorybox {
+  width: 134px;
+  height: 13px;
+  padding: 10px 20px;
+  border: 1px solid rgba($color: $grey, $alpha: 0.4);
+  border-radius: 20px;
+  font-size: 14px;
+  color: $grey;
+  margin-top: 5px;
+  &:focus {
+    outline: none;
+    border: 1px solid $orange;
+  }
 }

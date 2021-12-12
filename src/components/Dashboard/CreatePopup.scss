@@ -1,0 +1,206 @@
+// ----- Dashboard -----
+@import "../../../Theme.scss";
+
+.createPopup {
+  width: 100%;
+  height: calc(100vh - 70px);
+  //   background-color: lightgreen;
+  position: fixed;
+  top: 70px;
+  left: 0px;
+  @include flexbox;
+  .createPopup__container {
+    // background-color: coral;
+    background-color: $white;
+    width: 600px;
+    height: 500px;
+    padding: 15px;
+    border: $border-properties-orange;
+    position: relative;
+    .icon__close {
+      position: absolute;
+      right: 20px;
+      color: $grey;
+      cursor: pointer;
+    }
+
+    .createPopup__topic {
+      width: 100%;
+      height: 40px;
+      //   background-color: lightcyan;
+      color: $orange;
+      margin-top: 0px;
+      font-size: $font-extra-large;
+      font-weight: bold;
+      @include flexbox;
+    }
+    .createPopup__title {
+      width: 100%;
+      height: 70px;
+      //   background-color: lightgreen;
+
+      @include flexbox;
+      flex-direction: column;
+
+      p {
+        height: 30px;
+        width: 100%;
+        // background-color: lightseagreen;
+        color: $blue;
+        @include flexbox;
+        justify-content: flex-start;
+      }
+      input {
+        @include textbox;
+        width: 100%;
+      }
+    }
+    .createPopup__openingBalances {
+      width: 100%;
+      height: 100px;
+      //   background-color: lightcoral;
+
+      @include flexbox;
+      flex-direction: column;
+
+      .createPopup__openingBalances__heading {
+        width: 100%;
+        height: 30px;
+        // background-color: aqua;
+
+        @include flexbox;
+        justify-content: flex-start;
+        color: $blue;
+      }
+      .createPopup__openingBalances__title {
+        width: 100%;
+        height: 30px;
+        // background-color: lightyellow;
+        @include flexbox;
+        justify-content: flex-start;
+        p {
+          font-size: $font-small;
+          color: grey;
+        }
+        :first-child {
+          height: 100%;
+          //   background-color: lightgreen;
+          @include flexbox;
+          justify-content: flex-start;
+          width: 33%;
+        }
+        :nth-child(2) {
+          height: 100%;
+          //   background-color: lightcoral;
+          @include flexbox;
+          justify-content: flex-start;
+          width: 34%;
+        }
+        :last-child {
+          height: 100%;
+          //   background-color: lightgreen;
+          @include flexbox;
+          justify-content: flex-start;
+          width: 33%;
+        }
+      }
+      .createPopup__openingBalances__input {
+        width: 100%;
+        height: 40px;
+        // background-color: aqua;
+        @include flexbox;
+        justify-content: space-between;
+
+        .createPopup__openingBalances__date {
+          height: 100%;
+          width: 33%;
+          //   background-color: lightcoral;
+
+          input {
+            @include textbox;
+            width: 95%;
+          }
+        }
+        .createPopup__openingBalances__quantity {
+          height: 100%;
+          width: 34%;
+          //   background-color: lightgreen;
+
+          input {
+            @include textbox;
+            width: 95%;
+            margin-right: 5px;
+          }
+        }
+        .createPopup__openingBalances__cost {
+          height: 100%;
+          width: 33%;
+          //   background-color: lightcoral;
+
+          input {
+            @include textbox;
+            width: 100%;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+
+    .createPopup__share {
+      height: 70px;
+      //   background-color: lightpink;
+      .createPopup__share__heading {
+        // background-color: aqua;
+        height: 30px;
+        @include flexbox;
+        justify-content: flex-start;
+      }
+      .createPopup__share__searchbar {
+        height: 40px;
+        // background-color: lightgoldenrodyellow;
+        position: relative;
+        input {
+          @include textbox;
+          width: 100%;
+        }
+
+        .search__icon {
+          position: absolute;
+          right: 15px;
+          top: 12px;
+          color: rgba($color: $grey, $alpha: 0.5);
+        }
+      }
+    }
+    .createPopup__box {
+      height: calc(100% - 330px);
+      //   background-color: lightpink;
+      @include flexbox;
+      .createPopup__box__container {
+        // background-color: lightblue;
+        width: 100%;
+        height: 80%;
+        border-radius: 25px;
+        border: $border-properties;
+        @include flexbox;
+
+        p {
+          color: $grey;
+        }
+        .icon__users {
+          color: $grey;
+          margin-right: 10px;
+        }
+      }
+    }
+    .createPopup__button {
+      height: 50px;
+      //   background-color: lightgreen;
+      @include flexbox;
+
+      button {
+        @include ButtonDark;
+      }
+    }
+  }
+}

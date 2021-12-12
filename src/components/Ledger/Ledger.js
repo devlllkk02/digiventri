@@ -191,7 +191,7 @@ function Ledger() {
         <div className="ledger">
           <div className="ledger__heading">
             <div className="ledger__heading__title">
-              <p>Inventory Ledger 01</p>
+              <p>{ledger.title}</p>
             </div>
             <div className="ledger__heading__option">
               <DropDown list={["WAC", "FIFO"]} />

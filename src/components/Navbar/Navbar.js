@@ -57,7 +57,7 @@ function Navbar() {
           <div className="navbar__container">
             {/* Logo */}
             <div className="navbar__logo">
-              <Link to="/">
+              <Link to="/dashboard">
                 <img src={DIGIVENTRI_LOGO} alt="DIGIVENTRI" />
               </Link>
             </div>

@@ -12,6 +12,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import { auth, db, storage } from "../../firebase";
+import { onAuthStateChanged } from "firebase/auth";
 import { collection, doc, onSnapshot } from "firebase/firestore";
 import DropDown from "../Dropdown/Dropdown";
 import CreatePopup from "./CreatePopup";
@@ -22,6 +23,16 @@ function Dashboard() {
   const [ledgers, setLedgers] = useState([]);
   const [myLedgers, setMyLedgers] = useState([]);
   const ledgersCollectionRef = collection(db, "ledgers");
+
+  const [u, setU] = useState("");
+
+  useEffect(() => {
+    //User
+    onAuthStateChanged(auth, (currentUser) => {
+      setU(currentUser);
+      console.log(currentUser);
+    });
+  }, []);
 
   useEffect(() => {
     onSnapshot(ledgersCollectionRef, (snapshot) => {
@@ -44,7 +55,7 @@ function Dashboard() {
 
   return (
     <>
-      {myLedgers.length > 0 && (
+      {u && (
         <div className="dashboard">
           <div className="dashboard__properties">
             <div className="dashboard__properties__button">
